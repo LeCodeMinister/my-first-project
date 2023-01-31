@@ -1,0 +1,84 @@
+ * {
+    margin: 0px;
+    padding: 0px;
+ }
+
+ /*Declaring my fonts*/
+ /* *************Delete unused when done!*************** */
+@font-face {
+    font-family: abril;
+    src: url(fonts/AbrilFatface-Regular.ttf);
+}
+@font-face {
+    font-family: alata;
+    src: url(fonts/Alata-Regular.ttf);
+}
+@font-face {
+    font-family: brogte;
+    src: url(fonts/brogte-rpmge.otf);
+}
+@font-face {
+    font-family: robot mono;
+    src: url(fonts/RobotoMono-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: robot mono italic;
+    src: url(fonts/RobotoMono-Italic-VariableFont_wght.ttf);
+}
+ :root {
+    /* Color theme */
+    --color-oxford-blue: #040926;
+    --color-cornflower-blue: #214497;
+    --color-congo-pink: #FF7370;
+    --color-nyanza-pale-green: #E4FDE1;
+    --color-white: #fefffb;
+
+    /* Project color definitions */
+    /* Do not change unless necessary as any change is applied across the project */
+    --selection-bg: var(--color-nyanza-pale-green);
+    --selction-font-color: var(--color-oxford-blue);
+    --header-bg: var(--color-white);
+    --header-font-color: var(--color-oxford-blue);
+
+    /* Project font definitions */
+    /* Do not change unless necessary as any change is applied across the project */
+    --header-font: alata;
+    --logo-font: abril;
+
+
+
+ }
+ ::selection {
+    color: var(--selction-font-color);
+    background-color: var(--selection-bg);
+ }
+/* Header properties apply to the footer, too */
+header, footer {
+    height: 10vh;
+    background-color: var(--header-bg);
+    color: var(--color-oxford-blue);
+    font-family: var(--header-font);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer {
+    justify-content: center;
+}
+header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+header a {
+    text-decoration: none;
+    color: var(--header-font-color);
+}
+header nav {
+    width: 50%;
+}
+header #logo {
+    font-family: var(--logo-font);
+    margin-left: 1em;
+    font-size: 2rem;
+}
