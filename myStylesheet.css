@@ -36,11 +36,13 @@
     /* Project color definitions */
     /* Do not change unless necessary as any change is applied across the project */
     --selection-bg: var(--color-congo-pink);
-    --selction-font-color: var(--color-oxford-blue);
-    --header-bg: var(--color-white);
+    --selection-font-color: var(--color-oxford-blue);
+    --header-bg: var(--color-nyanza-pale-green);
     --header-font-color: var(--color-oxford-blue);
-    --header-active-nav-link: underline;
     --section-font-color: var(--color-oxford-blue);
+    --section-bg: var(--color-white);
+    --section-img-shadow-color: var(--color-congo-pink);
+    --link-hover-color: var(--color-congo-pink);
 
     /* Project font definitions */
     /* Do not change unless necessary as any change is applied across the project */
@@ -50,6 +52,8 @@
     --logo-font: var(--my-serif);
     --section-title-font: var(--my-sans-serif);
 
+    /* Other definitions */
+    --header-active-nav-link: underline;
 
 
  }
@@ -79,32 +83,61 @@ header a {
     text-decoration: none;
     color: var(--header-font-color);
 }
+a:hover {
+    color: var(--link-hover-color);
+}
 header nav {
     width: 50%;
 }
 header #logo {
     font-family: var(--logo-font);
     margin-left: 1em;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 .active {
     text-decoration: var(--header-active-nav-link);
 }
 section {
     height: 80vh;
-    overflow: hidden;
+    overflow: auto;
     display: flex;
+    font-family: var(--section-title-font);
+    color: var(--section-font-color);
+    background-color: var(--section-bg);
+}
+#homeSection {
     justify-content: space-evenly;
     align-items: center;
-    font-size: 2rem;
-    color: var(--section-font-color);
+    font-size: 2rem;  
 }
 section img {
     width: 20vw;
-    filter: grayscale(100);
-    filter: drop-shadow(2px 5px 15px #04092644);
+    box-shadow: 7.5px 7.5px 0px var(--section-img-shadow-color);
+    filter: drop-shadow(3px 5px 15px #04092644);
 }
-section h1 {
-    font-family: var(--section-title-font);
+#homeSection h1 {
     width: 70vw;
+}
+#homeSection b {
+    border-bottom: 7.5px solid var(--color-cornflower-blue);
+}
+#bioSection, #experienceSection {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#bioSection h1, #experienceSection h1 {
+    margin: 1em;
+    font-size: 2rem;
+}
+#bioSection p , #experienceSection p{
+    display: inline-block;
+    width: 70vw;
+}
+#bioSection img, #experienceSection img {
+    width: 50vw;
+    margin: 2em;
+}
+#bioSection li {
+    margin-bottom: 1em;
 }
